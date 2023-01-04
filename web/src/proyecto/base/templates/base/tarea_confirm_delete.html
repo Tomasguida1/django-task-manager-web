@@ -1,3 +1,5 @@
+{% extends 'base/principal.html'%}
+{% block content%}
 <a href = "{%url 'Tareas' %}"> Volver </a>
 <form method = "POST">
     {% csrf_token %}
@@ -8,3 +10,4 @@
 
 
 </form>
+{% endblock content%}
