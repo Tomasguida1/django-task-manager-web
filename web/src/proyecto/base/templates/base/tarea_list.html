@@ -1,7 +1,13 @@
 {% extends 'base/principal.html'%}
 {% block content%}
+<div class="barra-superior">
+  <div>
+    <h1>Hola {{request.user|title}}</h1>
+    <h3 style = "margin:0">Tienes <i> {{count}}</i> tarea{{count|pluralize}} incompleta{{count|pluralize}}</h3>
+  </div>
+
+</div>
 {% if request.user.is_authenticated%}
-<p>{{request.user}}</p>
 <a href = "{% url 'Logout'  %}"> Salir </a>
 {% else %}
 <a href = "{% url 'Login'  %}"> Ingresar </a>
