@@ -1,12 +1,15 @@
 {% extends 'base/principal.html'%}
 {% block content%}
+<div class="barra-superior" >
+
 <h1> Formulario de tareas </h1>
-<a href = "{%url 'Tareas' %}"> Volver </a>
-<form method = "POST" action ="">
+<a class = "volver"href = "{%url 'Tareas' %}"> Volver </a>
+<form class= "formulario" method = "POST" action ="" >
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" name="Enviar">
+    <input class= "boton" type="submit" name="Enviar">
 
 
 </form>
+</div>
 {% endblock content%}
